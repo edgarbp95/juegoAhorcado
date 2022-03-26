@@ -15,6 +15,7 @@ const imagenAhorcado = document.querySelectorAll(".img_inv");
 const botonStart = document.querySelector(".start");
 const msjFinDePartida = document.getElementById("perdiste");
 
+let contador = 0;
 
 let diccionario = ["abandonar","anaconda","camisa","armario","calendario","camuflaje","ceremonia","cliente","clinica","correo","deporte","dinamita","duelo","duende","diente","eclipse","elefante","empatia","estimulo","explicar","farsante","franela","genio","gorila","guarida","hamburguesa","honor","ilusion","inocente","instinto","jinete","laberinto","lechuga","loteria","luna","medico","melodia","miniatura","neurona","novela","oceano","olfato","ombligo","pagina","parasito","petroleo","piramide","psicologia","radio","restaurante","sarcasmo","silencio","tatuaje","tomate","violeta","virus","violin","zanahoria"];
 
@@ -138,7 +139,7 @@ const chequearGanador = ()=>{
 
 const adivinarUnaLetra = ()=>{
     // let letraPresionada = detectarLetra();
-    let contador = 0;
+    contador = 0;
     
     nuevaLetra.addEventListener("click",(e)=>{
         let letraIngresada = inputLetra.value.toLowerCase();
@@ -177,16 +178,16 @@ const adivinarUnaLetra = ()=>{
                     inputLetra.disabled = true;
                     inputAdivinar.disabled = true;
                     adivinarPalabra.disabled = true;
+                    contador=0;
     
                 }
-                      
-                
+                         
             }
              inputLetra.value = "";
         }
 
         chequearGanador();
-    
+        
     })
 
     
@@ -203,6 +204,8 @@ const resetJuego = ()=>{
     inputLetra.disabled = false;
     inputAdivinar.disabled = false;
     adivinarPalabra.disabled = false;
+    contador = 0;
+    
 
 }
 
