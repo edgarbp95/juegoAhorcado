@@ -41,7 +41,7 @@ const adivinarLaPalabra = ()=>{
                 inputAdivinar.classList.remove("borde_rojo_input");
             },1000);
         } else{
-            let palabra = inputAdivinar.value;
+            let palabra = inputAdivinar.value.toLowerCase();
             let palabraSeparada = palabra.split("");
             
             let coincidencia = true;
@@ -141,7 +141,9 @@ const adivinarUnaLetra = ()=>{
     let contador = 0;
     
     nuevaLetra.addEventListener("click",(e)=>{
-        let letraIngresada = inputLetra.value;
+        let letraIngresada = inputLetra.value.toLowerCase();
+        console.log(letraIngresada);
+        
         const palabraCompleta = document.querySelectorAll(".letra_palabra");
         let coincidencia = false;
 
