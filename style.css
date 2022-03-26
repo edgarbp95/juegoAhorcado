@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Rubik',sans-serif;
+    background-color: var(--Dark-blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--Pale-Blue);
+    width: 700px;
+    height: 400px;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+button{
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--Light-red-work);
+    color: var(--Very-dark-blue);
+    font-weight: 600;
+}
+
+.botones{
+    display: flex;
+    gap: 0.5em;
+    position: relative;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: 50px;
+}
+
+.imagen_ahorcado div{
+    position: absolute;
+}
+
+.imagen_ahorcado img{
+    width: 250px;
+    margin-left:20px;
+    margin-top: 20px;
+  
+}
+
+.palabra{
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 300px;
+    margin-top: 100px;
+    gap: 0.5em;
+}
+
+.seccion_1{
+    position: absolute;
+}
+
+.borde_inferior_letra{
+    border-bottom: 1px solid black;
+}
+
+.letra_palabra{
+    font-size: 2rem;
+    width: 20px;
+    text-align: center;
+    opacity: 0;
+}
+
+#cabeza, #cuerpo, #brazoIzquierdo, #brazoDerecho, #piernaIzquierda, #piernaDerecha {
+    display: none;
+}
+
+.input_letra{
+    display: flex;
+    flex-direction: column;
+}
+
+.input_letra input{
+    height: 30px;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    /* display: none; */
+}
+
+#adivinarPalabra{
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.start{
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 80px;
+    cursor: pointer;
+}
+
+.letra_visible{
+    opacity: 1;
+}
+
+#perdiste{
+   position: relative;
+    bottom: 80px;
+    left: 250px;
+    font-size: 2rem;
+    color: var(--Light-red-study);
+    display: none;
+}
+
+.borde_rojo_input{
+    border: 1px solid red;
+}
+
+@media only screen and (max-width:720px) {
+
+ .botones{
+     margin: 0;
+     margin-top: auto;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 30px;
+ }
+
+ .container{
+     width: 330px;
+     height: 600px;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .input_letra{
+     display: flex;
+     flex-direction: row;
+     gap: 0.5em;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #letra{
+     /* height: 40px; */
+     margin: 0;
+ }
+
+ #adivinar{
+     margin: 0;
+ }
+
+ .palabra{
+     margin: 0 auto;
+     margin-top: 320px;
+     
+ }
+
+ #perdiste{
+     left: 0;
+     bottom: 10px;
+ }
+    
+
+ .imagen_ahorcado{
+     position: relative;
+     right: 50px;
+ }
+ 
+ .seccion_1{
+     /* width: 100%; */
+     display: flex;
+     justify-content: flex-start;
+ }
+
+ .imagen_ahorcado img{
+     width: 240px;
+ }
+
+ #base{
+     display: none;
+ }
+ 
+}

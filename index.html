@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="seccion_1">
+            <div class="imagen_ahorcado">
+                <div class="img_ahorcado" id="base"> <img src="./imagen/base.png" alt=""></div>
+                <div class="img_ahorcado img_inv" id="cabeza"> <img src="./imagen/cabeza.png" alt=""></div>
+                <div class="img_ahorcado img_inv" id="cuerpo"> <img src="./imagen/cuerpo.png" alt=""></div>
+                <div class="img_ahorcado img_inv" id="brazoIzquierdo"> <img src="./imagen/brazo-izquierdo.png" alt=""></div>
+                <div class="img_ahorcado img_inv" id="brazoDerecho"> <img src="./imagen/brazo-derecho.png" alt=""></div>
+                <div class="img_ahorcado img_inv" id="piernaIzquierda"> <img src="./imagen/pie-izquierdo.png" alt=""></div>
+                <div class="img_ahorcado img_inv" id="piernaDerecha"> <img src="./imagen/pie-derecho.png" alt=""></div>
+            </div>
+
+            <div class="palabra">
+                
+            </div>
+
+            
+        </div>
+        
+
+        <div class="botones">
+            <div>
+                <H2 id="perdiste"></H2>
+            </div>
+            <button class="start"> Start</button>
+            <div class="input_letra">
+                <input data-coincidencia="si" id="letra" type="text" maxlength="1">
+                <button id="decirLetra">Adivinar la letra</button>
+            </div>
+            <div class="input_letra">
+                <input id="adivinar" type="text">
+                <button id="adivinarPalabra">Adivinar la palabra</button>
+            </div>
+            
+        </div>
+
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
