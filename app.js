@@ -174,6 +174,10 @@ const adivinarUnaLetra = ()=>{
                 if(contador==6){
                     msjFinDePartida.innerHTML= "¡Perdiste!";
                     msjFinDePartida.style.display = "block";
+                    for(let i=0;i<palabraCompleta.length;i++){
+                        palabraCompleta[i].classList.add("letra_visible");
+                        palabraCompleta[i].style.color = "red";
+                    }
                     nuevaLetra.disabled = true;
                     inputLetra.disabled = true;
                     inputAdivinar.disabled = true;
